@@ -1,15 +1,44 @@
+<!DOCTYPE html>
 <html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
-
   <title>Cat Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body class="page-body">
+  <header class="page-header">
+  <div class="page-header__inner-wrapper">
+    <div class="page-header__slogan-wrapper">
+      <a href="" class="page-header__logo">
+        <img src="img/logo-mobile.png" alt="Cat Energy" height="37" width="34">
+      </a>
+      <p class="page-header__site-name"><span class="bold">CAT</span> ENERGY</p>
+    </div>
+    <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+  </div>
+  <nav class="main-nav">
+
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active"><a href="">ГЛАВНАЯ</a></li>
+        <li class="site-list__item"><a href="">КАТАЛОГ ПРОДУКЦИИ</a></li>
+        <li class="site-list__item"><a href="">ПОДБОР ПРОГРАММЫ</a></li>
+
+      </ul>
+    </div>
+  </nav>
+  
+
+</header>
+
   <main class="page-main">
     <h1 class="catalog-header">Подбор программы</h1>
     <section class="form">
+      <h2 class="form__title">Форма подбора питания для вашего кота.</h2>
       <div class="form__wrapper">
         <p class="form__description">Заполните анкету, и мы подберем
           программу питания для вашего кота</p>
@@ -43,7 +72,7 @@
             <label for="email">E-mail:*</label>
 
             <input type="text" id="contact-phone" placeholder="8 (960) 900-60-90" required>
-            <label for="contact-number">Телефон:*</label>
+            <label for="contact-phone">Телефон:*</label>
           </fieldset>
           <fieldset class="form__comment form-fieldset">
             <legend class="form__legend">
@@ -66,13 +95,51 @@
             <label for="additionally-milk">молоко</label>
 
             <input type="checkbox" name="additionally-items" id="additionally-vitamins">
-            <label for="additinally-vitamins">витамины</label>
+            <label for="additionally-vitamins">витамины</label>
+            <p class="form__explanation">* — Обязательные поля</p>
           </fieldset>
+
 
         </form>
       </div>
     </section>
   </main>
+  <footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <h2 class="footer-title visually-hidden">cat energy</h2>
+    <div class="contacts wrapper">
+      <p class="contacts__title">приглашаем<br>
+        к сотрудничеству<br>дилеров!</p>
+      <p class="contacts__text">ул. Большая<br>
+        Конюшенная, д. 19/8<br>
+        Санкт-Петербург</p>
+    </div>
+    <div class="page-footer__location"> </div>
+    <div class="social__wrapper wrapper">
+      <div class="page-footer__social social">
+
+        <div class="social__logo">Cat Energy</div>
+        <ul class="social__list">
+          <li class="social__item"><a href="https://vk.com/" class="social__link  social__link--vk">Мы в
+              ВКонтакте</a>
+          </li>
+          <li class="social__item"><a href="https://www.instagram.com/" class="social__link social__link--inst">Мы в
+              Инстаграм</a></li>
+          <li class="social__item"><a href="https://www.facebook.com/" class="social__link social__link--fb">Мы в
+              фейсбук</a></li>
+        </ul>
+
+      </div>
+      <div class="page-footer__copyright">
+        <div class="page-footer__copyright-title">HTML Academy</div>
+        <!-- <img src="" alt="" class="page-footer__copyright-logo"> -->
+        <div class="page-footer__copyright-logo">5</div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
 
 
 </body>

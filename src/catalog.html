@@ -1,11 +1,9 @@
+<!DOCTYPE html>
 <html lang="ru" class="page">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Cat Energy</title>
-</head>
+@@include("html/head.html", {"title": "Cat Energy"})
 
 <body class="page-body">
+  @@include("html/header.html")
   <h1 class="catalog-header">Каталог Продукции</h1>
   <main class="page-main">
     <section class="products">
@@ -111,9 +109,9 @@
                 гораздо больше!</p>
               <a rel="stylesheet" href="" class=" button products__button--more">показать все</a>
             </div>
-      </div>
-      </li>
-      </ul>
+
+          </li>
+        </ul>
       </div>
     </section>
     <section class="additional-products">
@@ -164,6 +162,7 @@
       </div>
     </section>
   </main>
+  @@include("html/footer.html")
 
 </body>
 
