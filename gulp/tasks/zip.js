@@ -7,7 +7,7 @@ export const zip = () => {
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "ZIP",
-                message: "Error: ${error.message}"
+                message: "Error: <%= error.message %>"
             })
         ))
         .pipe(zipPlugin(`${app.path.rootFolder}.zip`))

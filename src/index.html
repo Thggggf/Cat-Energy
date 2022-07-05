@@ -4,19 +4,67 @@
 @@include("html/head.html", {"title": "Cat Energy"})
 
 <body class="page-body">
-  <div class="page-header__wrapper">
+  <div class="page-header__wrapper wrapper">
     @@include("html/header.html")
     <section class="promo">
+
       <div class="promo__wrapper wrapper">
+        <div class="promo__background-cat">
+          <div class="promo__green-overlay"></div>
+          <picture class="promo__mobile__green-cat-image">
+            <img src="./img/index-background-tablet@1x.jpg" height="302px" alt="Beautiful cat on a green background"
+              srcset="./img/index-background-tablet@2x.jpg 2x">
+            <source srcset="./img/index-background-tablet@1x.webp 1x, ./img/index-background-tablet@2x.webp 2x"
+              type="image/webp">
+
+          </picture>
+          <picture class="promo__desktop__green-cat-image">
+            <img src="./img/index-background-desktop@1x.jpg" height="694px" alt="Beautiful cat on a green background"
+              srcset="./img/index-background-desktop@2x.jpg 2x">
+            <source srcset="./img/index-background-desktop@1x.webp 1x, ./img/index-background-desktop@2x.webp 2x"
+              type="image/webp">
+
+          </picture>
+        </div>
         <header class="promo__header">
           <h2 class="promo__slogan">Функциональное<br>
             питание для котов
           </h2>
           <p class="promo__intro">Занялся собой? Займись котом!</p>
         </header>
-        <img src="" alt="Cat Energy" class="promo__image">
+        <div class="promo__product-images">
+          <picture class="promo__mobile__product-image">
+            <img class="promo__product-image" src="./img/index-can-mobile@1x.png" height="270px"
+              alt="Cat Energy Pro with chicken" srcset="./img/index-can-mobile@2x.png 2x">
+            <source srcset="./img/index-can-mobile@1x.webp 1x, ./img/index-can-mobile@2x.webp 2x" type="image/webp">
+
+
+
+          </picture>
+          <picture class="promo__tablet__product-image">
+
+            <img class="promo__product-image" src="./img/index-can-tablet@1x.png" height="609px"
+              alt="Cat Energy Pro with chicken" srcset="./img/index-can-tablet@2x.png 2x">
+            <source srcset="./img/index-can-tablet@1x.webp 1x, ./img/index-can-tablet@2x.webp 2x" type="image/webp">
+
+
+
+          </picture>
+          <picture class="promo__desktop__product-image">
+
+            <img class="promo__product-image" src="./img/index-can-desktop@1x.png" height="609px"
+              alt="Cat Energy Pro with chicken" srcset="./img/index-can-desktop@2x.png 2x">
+            <source srcset="./img/index-can-desktop@1x.webp 1x, ./img/index-can-desktop@2x.webp 2x" type="image/webp">
+
+
+
+          </picture>
+        </div>
+
+
         <a href="" class="promo__button button">подобрать программу</a>
       </div>
+
 
     </section>
   </div>
@@ -25,7 +73,7 @@
     <h1 class="visually-hidden">Cat Energy</h1>
     <section class="program-types">
       <h2 class="visually-hidden">Варианты питания</h2>
-      <div class="program-types__wrapper">
+      <div class="program-types__wrapper wrapper">
         <ul class="program-types__list">
           <li class="program-types__list-item program-types__list-item--weight-loss">
             <img src="" alt="" class="program-types__image">
@@ -85,7 +133,7 @@
           <h2 class="example__title">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
             Cat Energy
-            Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+            Slim.<br> Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек<br> и
             по-прежнему спит
             по
             16 часов в день. </p>

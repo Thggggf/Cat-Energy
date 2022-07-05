@@ -15,7 +15,7 @@ export const scss = () => {
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",
-                message: "Error: ${error.message}"
+                message: "Error: <%= error.message %>"
             })
         ))
         .pipe(app.plugins.replace(/@img\//g, "../img/"))

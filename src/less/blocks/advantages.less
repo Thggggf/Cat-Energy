@@ -1,5 +1,5 @@
 .advantages {
-  width:100%;
+  width: 100%;
 
   &__wrapper {
     padding-bottom: 42px;
@@ -8,19 +8,37 @@
   &__title {
     margin-top: 27px;
     margin-bottom: 38px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+    color: black;
+
+    @media(min-width: @tablet-width) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    @media(min-width: @desktop-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 47px;
+    }
   }
 
   &__list {
     list-style-type: none;
     padding-left: 0;
-    @media(min-width: @tablet-width){
+
+    @media(min-width: @tablet-width) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
     }
 
-    @media(min-width: @laptop-width){
-      flex-wrap: nowrap;
+    @media(min-width: @laptop-width) {
+      flex-wrap: wrap;
 
 
     }
@@ -33,63 +51,76 @@
     min-height: 60px;
 
     margin-bottom: 20px;
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
 
     }
+
     @media(min-width: @tablet-width) {
       min-height: 280px;
       width: 40%;
-      padding-top:160px;
+      padding-top: 160px;
       box-sizing: border-box;
 
     }
-    @media(min-width: @desctop-width){
-      width:auto;
+
+    @media(min-width: @desktop-width) {
+      width: auto;
 
 
     }
- }
-
-
-
-    // @media (min-width: @tablet-width) and (max-width: @desctop-width){
-    //   &:nth-child(odd) {
-    //     margin-right: 20%;
-    //   }
-    // }
-
-
-    // @media(min-width: @laptop-width) and (max-width:@desctop-width){
-    //   &:nth-child(odd){
-    //     margin-right: 130px;
-    //   }
-    // }
-    // @media(min-width: @desctop-width) {
-    //   margin-right: 80px;
-    // }
-
-
-
-
-
-  &__list-item--leaf {
   }
+
+
+
+  // @media (min-width: @tablet-width) and (max-width: @desktop-width){
+  //   &:nth-child(odd) {
+  //     margin-right: 20%;
+  //   }
+  // }
+
+
+  // @media(min-width: @laptop-width) and (max-width:@desktop-width){
+  //   &:nth-child(odd){
+  //     margin-right: 130px;
+  //   }
+  // }
+  // @media(min-width: @desktop-width) {
+  //   margin-right: 80px;
+  // }
+
+
+
+
+
+  &__list-item--leaf {}
 
   &__description {
-    margin:0;
-    padding:0;
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: @special_dark-grey;
+    margin: 0;
+    padding: 0;
+
     @media(min-width: @tablet-width) {
       width: 200px;
+      font-size: 15px;
+      line-height: 24px;
+    }
+
+    @media(min-width: @desktop-width) {
+      font-size: 16px;
+
     }
   }
 
-  &__list-item--jar {
-  }
+  &__list-item--jar {}
 
-  &__list-item--fork {
-  }
+  &__list-item--fork {}
 
-  &__list-item--clocks {
-  }
+  &__list-item--clocks {}
 }

@@ -2,10 +2,12 @@
 
   &__wrapper {
     padding: 0 20px;
-    @media(min-width: @tablet-width){
+
+    @media(min-width: @tablet-width) {
       padding: 0 30px;
     }
-    @media(min-width: @desctop-width) {
+
+    @media(min-width: @desktop-width) {
       padding: 0 85px;
     }
 
@@ -13,10 +15,11 @@
 
   &__list {
     list-style-type: none;
-    padding-left:0px;
-    @media(min-width: @desctop-width){
+    padding-left: 0px;
+
+    @media(min-width: @desktop-width) {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: no-wrap;
       justify-content: space-between;
     }
   }
@@ -27,13 +30,20 @@
     margin-bottom: 20px;
     padding-left: 20px;
     padding-top: 21px;
-    @media(min-width: @tablet-width){
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+    @media(min-width: @tablet-width) {
       padding-left: 53px;
       padding-top: 77px;
       min-height: 372px;
       margin-bottom: 30px;
     }
-    @media(min-width: @desctop-width){
+
+    @media(min-width: @desktop-width) {
+
       min-height: 374px;
       margin: 0;
       flex-basis: 43.05%;
@@ -41,27 +51,88 @@
 
     }
   }
-  &__list-item:last-of-type{
+
+  &__list-item:last-of-type {
     margin-bottom: 0;
     margin-right: 0;
   }
-  .program-types__image{}
 
-  &__list-item--weight-loss {
-  }
+  .program-types__image {}
+
+  &__list-item--weight-loss {}
 
   &__title {
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 37px;
+
+    @media(min-width: @tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   &__description {
+    font-family: 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: @special_dark-grey;
+    border-bottom: 1px solid @light-grey-underline;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+
+    @media(min-width: @tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+      border-bottom: none;
+    }
   }
 
   &__link {
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    color: black;
+    display: block;
+    margin-top: 13px;
+    position: relative;
+    padding-right: 49px;
+    width: fit-content;
+    padding-bottom: 7px;
+
+    @media(min-width: @tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
   }
 
-  &__list-item--weight-gain {
+  &__link::after {
+    content: "";
+    top: 2px;
+
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 10px;
+    background: url("../img/icon_arrow.svg");
+
+    @media(min-width: @tablet-width) {
+      top: 8px;
+    }
   }
+
+
+  &__list-item--weight-gain {}
 }
-.visually-hidden {
-}
+
+.visually-hidden {}

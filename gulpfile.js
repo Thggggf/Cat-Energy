@@ -5,7 +5,7 @@ import gulp from "gulp";
 import { path } from "./gulp/config/path.js";
 
 // Импорт общих плагинов
-import { plugins } from "./gulp/config/plugins.js"
+import { plugins } from "./gulp/config/plugins.js";
 
 //  Передаём значения в глобальную переменную
 global.app = {
@@ -28,11 +28,11 @@ import { server } from "./gulp/tasks/server.js"
 import { scss } from "./gulp/tasks/scss.js"
 import { js } from "./gulp/tasks/js.js"
 import { images } from "./gulp/tasks/images.js";
-import { otfToTtf, TtftoWoff, fontsStyle } from "./gulp/tasks/fonts.js"
+import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js";
 import { svgSprite } from "./gulp/tasks/svg-sprite.js";
-import { zip } from "./gulp/tasks/zip.js"
-import { ftp } from "./gulp/tasks/ftp.js"
-import { less } from "./gulp/tasks/less.js"
+import { zip } from "./gulp/tasks/zip.js";
+import { ftp } from "./gulp/tasks/ftp.js";
+import { less } from "./gulp/tasks/lesscss.js";
 
 
 // Наблюдатель за изменениями в файлах
@@ -45,16 +45,14 @@ function watcher() {
   gulp.watch(path.watch.images, images)
 
 }
-watcher()
 
 export { svgSprite }
 // Последовательная обработка шрифтов
-const fonts = gulp.series(otfToTtf, TtftoWoff, fontsStyle)
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle)
 
 // Чтобы переключаться между less и sass, надо менять в вотчере и в mainTasks сценарии.
 
-// const mainTasks = (fonts, gulp.parallel(copy, html, less, js, images))
-const mainTasks = (gulp.parallel(copy, html, less, js, images))
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, less, js, images))
 
 // Построение сценариев выполнения задач
 
