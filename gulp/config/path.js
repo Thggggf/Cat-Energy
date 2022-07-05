@@ -30,7 +30,7 @@ export const path = {
     js: `${srcFolder}/js/**/*.js`,
     scss: `${srcFolder}/scss/**/*.scss`,
     less: `${srcFolder}/less/**/*.less`,
-    html: `${srcFolder}/**/*.html`,
+    html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`
   },
   clean: buildFolder,
